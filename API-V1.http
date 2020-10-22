@@ -1,0 +1,105 @@
+################## Book Index ##################
+# Get normal index. params [per_page: int, page: int]
+GET {{host}}/api/{{version}}/book-index.php?per_page=10&page=1
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get book index filtered by "status=1". params [per_page: int, page: int]
+GET {{host}}/api/{{version}}/book-index-importer.php?per_page=10&page=1
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get latest books. param(filtered_by) [created_at, updated_at] & param(previous_day_count) [int].
+GET {{host}}/api/{{version}}/get-latest-books.php?filtered_by=created_at&previous_day_count=1
+Accept: application/json
+Content-Type: application/json
+###
+
+# For testing only
+# Get updated data. params [per_page: int, page: int]
+GET {{host}}/api/{{version}}/get-updated-data.php?page=1&per_page=100
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get raw record index sorted by [updated_at] and filtered by "status=1". params [per_page: int, page: int]
+GET {{host}}/api/{{version}}/raw-index-of-records.php?per_page=10&page=1
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get minimal data of book to update "stock and price". param(column_name) [stock_updated_at, sold_at] and param [previous_day_count: int]
+GET {{host}}/api/{{version}}/update-stock.php?column_name=stock_updated_at&previous_day_count=1
+Accept: application/json
+Content-Type: application/json
+###
+
+
+################## Related data ##################
+# Get category list.
+GET {{host}}/api/{{version}}/category-list.php
+Accept: application/json
+Content-Type: application/json
+###
+
+# Get cover types.
+GET {{host}}/api/{{version}}/cover-types.php
+Accept: application/json
+Content-Type: application/json
+###
+
+# Get images list.
+GET {{host}}/api/{{version}}/images-list.php
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get paper types.
+GET {{host}}/api/{{version}}/paper-types.php
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get print color types.
+GET {{host}}/api/{{version}}/print-color-types.php
+Accept: application/json
+Content-Type: application/json
+###
+
+################## Single book ##################
+# Get all fields of raw book.
+GET {{host}}/api/{{version}}/get-all-fields.php
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get normal book data. param [barcode: string]
+GET {{host}}/api/{{version}}/get-book-data.php?barcode=9782745106988
+Accept: application/json
+Content-Type: application/json
+###
+
+
+# Get raw book data. param [barcode: string]
+GET {{host}}/api/{{version}}/get-book-raw-data.php?barcode=9782745106988
+Accept: application/json
+Content-Type: application/json
+###
+
+################## For Testing ##################
+
+
+# Test the code
+GET {{host}}/api/{{version}}/runScript.php
+Accept: application/json
+Content-Type: application/json
+###
