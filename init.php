@@ -1,5 +1,5 @@
 <?php
-$env = parse_ini_file('.env');
+$env = parse_ini_file('env.ini');
 date_default_timezone_set('Europe/Istanbul');
 ini_set('default_charset', 'utf-8');
 if (!isset($is_debugging)) $is_debugging = false;
